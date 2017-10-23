@@ -1,0 +1,133 @@
+
+/*start universal css*/
+
+#index_container {
+	/*width: 100%;
+	height: auto;*/
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 100px 450px 350px 350px 350px 300px 100px;
+/*    grid-template-rows: 5% 20% 20% 20% 15% 15% 5%;
+*/	grid-template-areas: "a"
+						 "b" 
+						 "c"
+						 "d"
+						 "e"
+						 "f"
+						 "g";
+}
+
+
+header {
+	grid-area: a;
+	background-color: gray;
+	display: flex;
+	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header li {
+	display: inline-block;
+	padding: 15px;
+}
+
+
+h1 #headerlogo {
+}
+
+/*end universal css*/
+
+#index_main_banner {
+	grid-area: b;
+}
+
+#index_does_this_sound_like_you {
+	grid-area: c;
+	background-color: gray;
+}
+
+#index_benefits {
+	grid-area: d;
+}
+
+#index_top_articles {
+	grid-area: e;
+	background-color: gray;
+
+}
+
+#index_main_banner {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+#index_does_this_sound_like_you h2 {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#index_does_this_sound_like_you_paragraphs {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+#index_does_this_sound_like_you p {
+width: 250px;
+text-align: center;
+}
+
+#index_what_youll_learn_paragraphs {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+#index_what_youll_learn p {
+width: 250px;
+text-align: center;
+}
+
+#index_what_youll_learn h2 {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#index_top_articles ul {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+#index_top_articles h2 {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/*start universal css*/
+
+#subscribe {
+	grid-area: f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#subscribe p {
+width: 500px;
+text-align: center;
+}
+
+footer {
+	grid-area: g;
+	background-color: gray;
+}
+
+/*end universal css
