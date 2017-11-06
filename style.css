@@ -1,10 +1,10 @@
 
 
-/*HEADER CSS*/
+/*HEADER*/
 
 header {
 	grid-area: a;
-	background-color: gray;
+	background-color: white;
 	display: flex;
 	justify-content: flex-end;
 	justify-content: space-between;
@@ -30,12 +30,12 @@ a {
 }
 
 
-/*INDEX CSS*/
+/*INDEX*/
 
 #index_container {
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 100px 500px 350px 350px 350px 300px 100px;
+	grid-template-rows: 100px 550px 350px minmax(auto, auto) minmax(auto, auto) 300px 100px;
 	grid-template-areas: "a"
 						 "b" 
 						 "c"
@@ -51,7 +51,7 @@ a {
 
 #index_does_this_sound_like_you {
 	grid-area: c;
-	background-color: gray;
+	background-color: white;
 }
 
 #index_benefits {
@@ -65,13 +65,49 @@ a {
 }
 
 #index_main_banner {
+background-image: url("images/guy_on_mountain.jpeg");
+background-position: center;
+background-size: cover;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+color: white;
+position: relative;
+z-index: 0;
 }
 
-/*does this sound like you css*/
+#index_main_banner::after {
+content:"";
+position: absolute;
+background-color: black;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: -1;
+opacity: .075;
+}
+
+#index_main_banner h2 {
+font-size: 58px;
+margin: 0;
+}
+
+#index_main_banner h4 {
+font-size: 22px;
+}
+
+#index_main_banner button {
+	background-color: #27bd93;
+	border: none;
+	color: white;
+	font-size: 16px;
+	border-radius: 5%;
+	padding: 10px 15px;
+}
+
+/*DOES THIS SOUND LIKE YOU?*/
 
 #index_does_this_sound_like_you_photos {
 display: flex;
@@ -80,6 +116,7 @@ justify-content: space-around;
 
 #index_does_this_sound_like_you_photos img {
 border-radius: 50px;
+padding-top: 25px;
 }
 
 #index_does_this_sound_like_you h2 {
@@ -99,32 +136,32 @@ width: 250px;
 text-align: center;
 }
 
-/*what you'll learn css*/
+/*WHAT YOU"LL LEARN*/
 
 #index_what_youll_learn {
 display: flex;
 flex-direction: column;
-border: 3px solid black;
+background-color: #f3f3f3;
 }
 
 #index_what_youll_learn #content_div {
 display: flex;
 flex-direction: row;
-border: 3px solid black;
 }
 
-#index_what_youll_learn div {
+#index_what_youll_learn #content_div div {
 display: flex;
 flex-direction: column;
 flex: 1;
-border: 2px solid black;
 justify-content: center;
 align-items: center;
 }
 
 #index_what_youll_learn h2 {
 text-align: center;
+padding-top: 10px;
 }
+
 
 #index_what_youll_learn img {
 padding-top: 30px;
@@ -132,9 +169,43 @@ padding-top: 30px;
 
 #index_what_youll_learn p {
 width: 250px;
-padding-top: 30px;
-padding-bottom: 30px;
+padding-bottom: 20px;
 }
+
+/*INDEX TOP ARTICLES*/
+
+#index_top_articles {
+display: flex;
+flex-direction: column;
+background-color: white;
+}
+
+#top_article_container {
+display: flex;
+flex-direction: row;
+flex: 1; 
+}
+
+.top_article {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+flex: 1; 
+padding-bottom: 20px;
+}
+
+.top_article p {
+	width: 70%;
+}
+
+.top_article a {
+	color: #27bd93;
+	font-weight: bolder;
+	display: inline-block;
+	width: 70%;
+}
+
 
 #index_top_articles h2 {
 display: flex;
@@ -152,12 +223,18 @@ list-style-type: none;
 display: flex;
 }
 
+#index_top_articles img {
+	padding: 25px 0px;
+	border-radius: 15%;
+}
+
 #subscribe {
-	grid-area: f;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+grid-area: f;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: #f3f3f3;
 }
 
 #subscribe p {
@@ -166,17 +243,18 @@ text-align: center;
 }
 
 #index_footer {
-	grid-area: g;
-	background-color: gray;
+grid-area: g;
+background-color: white;
 }
 
-/*blog starts here*/
+
+/*BLOG*/
 
 
 #blog_container {
 	display: grid;
 	grid-template-columns: 30% 70%;
-	grid-template-rows: 100px 1400px 250px 100px;
+	grid-template-rows: 100px minmax(auto, auto) 250px 100px;
 	grid-template-areas: "a a"
 						 "b c" 
 						 "b d"
@@ -185,7 +263,6 @@ text-align: center;
 
 #blog_optin_sidebar {
 	grid-area: b;
-	background-color: gray;
 	text-align: center;
 }
 
@@ -199,8 +276,34 @@ text-align: center;
 	flex-direction: column;
 }
 
+#blog_articles h2 {
+padding-bottom: 25px;
+}
+
+#blog_optin_sidebar {
+	padding-top: 13px;
+}
+
+#blog_top_articles {
+padding-top: 30px;
+}
+
+.sidebar_top_article img {
+	max-height:150px; 
+}
+
 article {
 	width: 600px;
+	padding-bottom: 50px;
+}
+
+article a {
+	color: #27bd93;
+	font-weight: bolder;
+}
+
+#blog_articles img {
+max-width: 600px;
 }
 
 #blog_subscribe {
@@ -218,11 +321,10 @@ text-align: center;
 
 #blog_footer {
 	grid-area: e;
-	background-color: gray;
 }
 
 
-/*Resources CSS*/
+/*RESOURCES*/
 
 #resources_container {
 	display: grid;
@@ -315,8 +417,6 @@ text-align: center;
 
 #mission_footer {
 	grid-area: e;
-	background-color: gray;
-
 }
 
 
@@ -367,8 +467,6 @@ text-align: center;
 
 #contact_footer {
 	grid-area: e;
-	background-color: gray;
-
 }
 
 /* FOOTER CSS */
@@ -377,6 +475,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background-color: white;
 }
 
 footer h1 {
