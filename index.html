@@ -2,24 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>ZenWealth</title>
+    <title>Finance Blog</title>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="script.js" type="text/javascript"></script>
   </head>
   <div id="index_container">
   <body>
   	<header>
-  		<h1 id="header_logo">Zen Wealth</h1>
+  		<h1 id="header_logo">Finance Blog</h1>
+      <div class="menu">Menu</div>
     <nav>
- 		<ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contacts.html">Contact</a></li>
- 		</ul>
+   		<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+   		</ul>
     </nav>
   	</header>
   	<section id="index_main_banner">
@@ -29,16 +30,20 @@
   	</section>
   	<section id="index_does_this_sound_like_you">
   		<h2>Does this sound like you?</h2>
-        <div id="index_does_this_sound_like_you_photos">
-          <img src="images/woman_coffee.jpeg" alt="woman_drinking_coffee"> 
-          <img src="images/guy_backwards_hat.jpeg" alt="guy_backwards_hat">
-          <img src="images/woman_safari.jpeg" alt="woman_on_safari"> 
+        <div class="index_does_this_sound_like_you_blocks">
+        <div>
+           <img src="images/woman_coffee.jpeg" alt="woman_drinking_coffee"> 
+           <p>You want to save more money, but find it difficult.</p>
         </div>
-        <div id="index_does_this_sound_like_you_paragraphs">
-  			<p>You want to save more money, but find it difficult.</p>
-  			<p>You want to invest but don't know where to start.</p>
-  			<p>You're interested in financial indpendence and early retirement.</p>
+         <div>
+           <img src="images/guy_backwards_hat.jpeg" alt="guy_backwards_hat">
+           <p>You want to invest but don't know where to start.</p>
         </div>
+         <div>
+           <img src="images/woman_safari.jpeg" alt="woman_on_safari"> 
+           <p>You're interested in financial indpendence and early retirement.</p>
+        </div>
+      </div>
   	</section>
   	<section id="index_what_youll_learn">
   		  <h2>What you'll learn</h2>
@@ -87,12 +92,31 @@
   	</section>
   	<section id="subscribe">
   		<h2>Want to learn more?</h2>
-  		<p>Want to learn to save, invest, and build a better future?  Subscribe and get our best articles, tips, and analysis delivered directly to your  inbox.</p>
-      <p>INSERT MAILCHIMP FORM HERE</p>
-  	</section>
+  		<p>Want to learn to save, invest, and build a better future?  Subscribe and get our best articles, tips, and analysis delivered directly to your  inbox.</p> 
+    
+    <div class="email_form">
+      <form action="/action_page.php">
+      <div>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+      <div>
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+      <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email...">
+      </div>
+      <div>
+      <input type="submit" value="Submit">
+      </div>
+      </form>
+    </div>
+  </section>
   <footer id="index_footer">
-    <h1>Zen Wealth</h1>
-    <p>© 2017 zenwealth.co All Rights Reserved</p>
+    <h1>Finance Blog</h1>
+    <p>© 2017 financeblog.co All Rights Reserved</p>
   </footer>
   </body>
   </div>
