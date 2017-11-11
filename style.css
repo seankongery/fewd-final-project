@@ -251,7 +251,7 @@ background-color: #f3f3f3;
 }
 
 #subscribe p {
-width: 500px;
+width: 450px;
 text-align: center;
 }
 
@@ -276,11 +276,7 @@ padding-right: 10px;
 font-weight: bold;
 }
 
-#subscribe p {
-margin: 0;
-}
-
-.submit_button {
+.email_form button {
 	background-color: #27bd93;
 	border: none;
 	color: white;
@@ -289,13 +285,17 @@ margin: 0;
 	padding: 10px 15px;
 }
 
+#subscribe p {
+margin: 0;
+}
+
 /*BLOG*/
 
 
 #blog_container {
 	display: grid;
 	grid-template-columns: 30% 70%;
-	grid-template-rows: 100px minmax(auto, auto) 250px 100px;
+	grid-template-rows: minmax(100px,auto) minmax(auto, auto) minmax(250px,auto) minmax(auto,100px);
 	grid-template-areas: "a a"
 						 "b c" 
 						 "b d"
@@ -321,8 +321,12 @@ margin: 0;
 padding-bottom: 25px;
 }
 
+article a:hover {
+color: black;
+}
+
 #blog_optin_sidebar {
-	padding-top: 13px;
+	padding-top: 15px;
 }
 
 #blog_top_articles {
@@ -331,6 +335,7 @@ padding-top: 30px;
 
 .sidebar_top_article img {
 	max-height:150px; 
+	width: 300px;
 }
 
 article {
@@ -353,6 +358,10 @@ max-width: 600px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+#blog_subscribe h2 {
+	margin: 0;
 }
 
 #blog_subscribe p {
@@ -527,13 +536,15 @@ footer p {
 	padding-right: 60px;
 }
 
+
 /*INDEX MOBILE CSS*/
+
 
 @media screen and (max-width:780px) {
 
 .index_does_this_sound_like_you_blocks {
-display: flex;
-flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 #index_what_youll_learn #content_div {
@@ -547,15 +558,15 @@ flex-direction: column;
 }
 
 header {
-display: flex;
-flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 header nav {
-height: 0;
-overflow: hidden;
-transition: 1s;
-text-align: center;
+	height: 0;
+	overflow: hidden;
+	transition: 1s;
+	text-align: center;
 }
 
 header nav.open {
@@ -598,7 +609,7 @@ text-align: center;
 }
 
 #index_what_youll_learn p {
-	text-align: center;
+text-align: center;
 }
 
 #subscribe p {
@@ -637,5 +648,89 @@ text-align: center;
 #index_does_this_sound_like_you {
 	padding: 15px 0px; 
 }
+
+/*BLOG MOBILE CSS*/
+
+#blog_container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: minmax(100px,auto) minmax(auto,auto) minmax(100px,auto) minmax(100px,auto) minmax(100px,auto);
+	grid-template-areas: "a"
+						 "b"
+						 "c"
+						 "d"
+						 "e";									    
+}
+
+header {
+	grid-area: a;
+}
+
+#blog_articles {
+	grid-area: b;
+}
+
+#blog_optin_sidebar {
+	grid-area: c;
+	padding-top: 0;
+}
+
+#blog_subscribe {
+	grid-area: d;
+}
+
+#blog_footer {
+	grid-area: e;
+}
+
+#optin {
+	display: none;
+}
+
+#blog_articles {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+article {
+	width: 75%;
+}
+
+#blog_articles img {
+	max-width: 100%;
+}
+
+#blog_footer {
+display: flex;
+flex-direction: column;
+}
+
+#blog_footer p {
+padding-right: 0;
+}
+
+#blog_footer h1 {
+padding-left: 0;
+}
+
+#blog_subscribe p {
+width: 75%;
+text-align: center;
+}
+
+#blog_top_articles {
+padding-top: 0;
+}
+
+#blog_top_articles h2 {
+margin: 0;
+}
+
+#blog_subscribe {
+padding-top: 25px;
+}
+
 
 }
